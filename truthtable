@@ -11,14 +11,15 @@ int main()
     if(ch==1)
     {
     printf("\nTruth table of AND Gate");
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 5; i++) 
+    {
         product = a[i] * b[i];
         printf("\n %d AND %d = %d",a[i], b[i], product);
     }
     }
-    printf("\nTruth tabel of OR gate");
-    if(ch==2)
+     else if(ch==2)
     {
+    printf("\nTruth tabel of OR gate");
     for (i = 0; i < 5; i++) 
     {
         if (a[i] == 0 && b[i] == 0)
@@ -28,13 +29,16 @@ int main()
         printf("\n %d OR %d = %d",a[i], b[i], or_ans);
     }
     }
-    if(ch==3)
+    else if(ch==3)
+    {
     printf("\nTruth table of NOT gate ");
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 5; i++) 
+    {
         if (a[i] == 0)
             ans = 1;
         else
             ans = 0;
         printf("\n  NOT %d = %d", a[i], ans);
+    }
     }
 }
