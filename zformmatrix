@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main(){
+   int rows, cols, r, c, matrix[10][10];
+   printf("Please enter the number of rows for the Square matrix: ");
+   scanf("%d", &rows);
+   printf("\n");
+   printf("Please enter the number of columns for the Square matrix: ");
+   scanf("%d", &cols);
+   printf("\n");
+   printf("Please enter the elements for the Matrix: \n");
+   for(r = 0; r < rows; r++)
+   {
+      for(c = 0;c < cols;c++)
+      {
+         scanf("%d", &matrix[r][c]);
+      }
+   }
+   printf("The Z Form Elements in the Square Matrix are: ");
+   printf("\n");
+   for(r = 0; r < rows; r++)
+   {
+      printf("%d\t ", matrix[0][r]);
+   }
+   for (r=1,c=cols-2;r<cols && c>=0;r++,c--)
+   {
+      printf("%d\t ", matrix[r][c]);
+   }
+   for (r = 1; r < cols; r++)
+   {
+      printf("%d\t ", matrix[cols-1][r]);
+   }
+   return 0;
+}
