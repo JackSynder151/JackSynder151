@@ -1,0 +1,128 @@
+#include "stdafx.h"
+#include <stdio.h>
+#include <math.h>
+#include <iostream>
+ 
+// start main program.
+int main()
+{
+    // variables
+    int a;
+    int b;
+    int g;
+    int i;
+    int j;
+    int x;
+    int y;
+    char ch = 'y';
+ 
+    do    {
+ 
+        puts("\nShow that (!(x < 5) && !(y >= 7)) and !((x < 5) || (y >= 7)) are logically equivalent\n\n"); // Part a
+         
+        // input x and y values
+        printf("%s", "Enter x: ");
+        scanf("%2u", &x);
+        printf("%s", "Enter y: ");
+        scanf("%2u", &y);
+ 
+        // if statement to handle logical equivalency
+        if ((!(x < 5) && !(y >= 7)) && !((x < 5) || (y >= 7)))    {
+            printf("%s", "True!\n\n");
+        }
+        else    {
+            printf("%s", "False!\n\n");
+        }
+ 
+         
+        printf("%s", "Want more examples of this logical equivalency? ");
+        getchar();
+        scanf("%c", &ch);
+    }
+    while (ch == 'y'); // choose yes to continue with current part, or no to move on
+         
+     
+    if (ch == 'n')    {
+ 
+    do    {
+        puts("\nShow that (!(a == b) || !(g != 5)) and !((a == b) && (g != 5)) are logically equivalent\n\n");
+ 
+        // input a, b, and g values
+        printf("%s", "Enter a: ");
+        scanf("%2u", &a);
+        printf("%s", "Enter b: ");
+        scanf("%2u", &b);
+        printf("%s", "Enter g: ");
+        scanf("%2u", &g);
+ 
+        // if statement to handle logical equivalency
+        if ((!(a == b) || !(g != 5)) && !((a == b) && (g != 5)))    {
+            printf("%s", "True!\n\n");
+        }
+        else    {
+            printf("%s", "False!\n\n");
+        }
+        printf("%s", "Want more examples of this logical equivalency? ");
+        getchar();
+        scanf("%c", &ch);
+    }
+    while(ch == 'y'); // choose yes to continue with current part, or no to move on
+    }
+ 
+    if (ch == 'n')    {
+         
+    do    {
+        puts("\nShow that !((x <= 8) && (y > 4)) and (!(x <= 8) || !(y > 4)) are logically equivalent\n\n");
+ 
+        // input x and y values
+        printf("%s", "Enter x: ");
+        scanf("%2u", &x);
+        printf("%s", "Enter y: ");
+        scanf("%2u", &y);
+         
+        // if statement to handle logical equivalency
+        if (!((x <= 8) && (y > 4)) && (!(x <= 8) || !(y > 4)))    {
+            printf("%s", "True!\n\n");
+        }
+        else    {
+            printf("%s", "False!\n\n");
+        }
+        printf("%s", "Want more examples of this logical equivalency? ");
+        getchar();
+        scanf("%c", &ch);
+    }
+    while (ch == 'y'); // choose yes to continue with current part, or no to move on
+    }
+ 
+    if (ch == 'n')    {
+ 
+    do    {
+        puts("\nShow that !((i > 4) || (j <= 6)) and (!(i > 4) && !(j <= 6)) are logically equivalent\n\n");
+ 
+        // input i and j values
+        printf("%s", "Enter i: ");
+        scanf("%2u", &i);
+        printf("%s", "Enter j: ");
+        scanf("%2u", &j);
+ 
+        // if statement to handle logical equivalency
+        if (!((i > 4) || (j <= 6)) && (!(x <= 8) && !(y > 4)))    {
+            printf("%s", "True!\n\n");
+        }
+        else    {
+            printf("%s", "False!\n\n");
+        }
+        printf("%s", "Want more examples of this logical equivalency? ");
+        getchar();
+        scanf("%c", &ch);
+    }
+    while (ch == 'y'); // choose yes to continue with current part, or no to move on
+    }
+ 
+    if (ch == 'n')    {
+        printf("\n%s", "Now you know DeMorgan's Laws!");
+    }
+ 
+    system("pause");
+    return 0;
+}
